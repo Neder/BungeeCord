@@ -6,3 +6,5 @@ jdk:
   - oraclejdk8
 notifications:
   email: false
+after_success:
+  - 'ls'
