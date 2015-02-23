@@ -2,9 +2,10 @@ sudo: false
 language: java
 jdk:
   - openjdk7
-  - oraclejdk7
-  - oraclejdk8
 notifications:
   email: false
 after_success:
   - 'ls'
+  - "tar -cvzf BungeeCord_${TRAVIS_JOB_NUMBER}_Returns.tar.gz *"
+  - "sudo chmod 777 ./upload.sh"
+  - "./upload.sh"
