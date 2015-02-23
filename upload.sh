@@ -2,4 +2,4 @@
 echo MD5:
 md5sum ./BungeeCord_${TRAVIS_JOB_NUMBER}_Returns.tar.gz
 echo Uploading BungeeCord_${TRAVIS_JOB_NUMBER}_Returns.tar.gz ...
-sudo curl -T ./BungeeCord_${TRAVIS_JOB_NUMBER}_Returns.tar.gz -u u262377766.towny:dtdtdtdtdtd ftp://ftp.ocw5902.esy.es/BuildTools/
+sudo curl -T ./BungeeCord_${TRAVIS_JOB_NUMBER}_Returns.tar.gz -u ocw5902:dtdtdtdtdtdtd ftp://ocw5902.hosting.paran.com/public_html
