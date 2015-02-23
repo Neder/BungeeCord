@@ -129,7 +129,7 @@ public class PipelineUtils
                 // IP_TOS is not supported (Windows XP / Windows Server 2003)
             }
             ch.config().setAllocator( PooledByteBufAllocator.DEFAULT );
-
+            ch.config().setOption( ChannelOption.TCP_NODELAY, false);
             ch.pipeline().addLast( TIMEOUT_HANDLER, new ReadTimeoutHandler( BungeeCord.getInstance().config.getTimeout(), TimeUnit.MILLISECONDS ) );
             ch.pipeline().addLast( FRAME_DECODER, new Varint21FrameDecoder() );
             ch.pipeline().addLast( FRAME_PREPENDER, framePrepender );
